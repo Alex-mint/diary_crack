@@ -70,3 +70,5 @@ def create_commendation(schoolkid_name, subject_name):
             text=commendation
         )
         print(f'Создана похвала: "{commendation}"')
+    else:
+        print(f'Предмет "{subject_name}" не найден')
