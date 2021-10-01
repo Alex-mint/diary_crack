@@ -7,9 +7,9 @@ def check_schoolkid(schoolkid_name):
     try:
         schoolkid = Schoolkid.objects.get(full_name__contains=schoolkid_name)
         return schoolkid
-    except ObjectDoesNotExist:
+    except Schoolkid.DoesNotExist:
         print(f'{schoolkid_name} не найден')
-    except MultipleObjectsReturned:
+    except Schoolkid.MultipleObjectsReturned:
         print(f'Hайдено больше 1ого ученика с именем {schoolkid_name}')
 
 
