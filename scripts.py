@@ -3,7 +3,7 @@ from datacenter.models import Lesson, Schoolkid, Chastisement, Mark, Commendatio
 import random
 
 
-def check_schoolkid(schoolkid_name):
+def get_schoolkid(schoolkid_name):
     try:
         schoolkid = Schoolkid.objects.get(full_name__contains=schoolkid_name)
         return schoolkid
